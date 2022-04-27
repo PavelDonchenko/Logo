@@ -7,14 +7,30 @@
 	&__bottom {}
 }
 .top-header {
+	
 	// .top-header__content
-	&__content {}
+	&__content {
+		display: flex;
+		align-items: center;
+		height: 90px;
+	}
 	// .top-header__column
-	&__column {}
+	&__column {
+		flex: 0 1 50%;
+		&:nth-child(2){
+			flex: 0 0 190px;
+			text-align: center;
+			padding-top: 25px;
+		}
+	}
 	// .top-header__menu
-	&__menu {}
+	&__menu {
+		margin-top: -10px;
+	}
 	// .top-header__logo
-	&__logo {}
+	&__logo {
+		
+	}
 	// .top-header__contacts
 	&__contacts {}
 }        
@@ -24,41 +40,103 @@
 	// .menu__body
 	&__body {}
 	// .menu__list
-	&__list {}
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		
+	}
 	// .menu__item
-	&__item {}
+	&__item {
+		flex: 0 1 33.333%;
+	}
 	// .menu__link
-	&__link {}
+	&__link {
+		display: inline-flex;
+		justify-content:center;
+		align-items: center;
+		white-space: nowrap;
+		height: 27px;
+		padding: 0px 20px;
+		color: #ffffff;
+		font-family: Play;
+		font-weight: 700;
+		font-style: normal;
+		line-height: 18px;
+		text-decoration: underline;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover){
+			&:hover,
+			&:focus	{
+				background-color: #068292;
+				border-radius: 20px;
+				text-decoration: underline;
+			}
+		}
+	}
 }
 
 .contsacts-header {
+	display: flex;
+	justify-content:center;
+	align-items: center;
 	// .contsacts-header__column
-	&__column {}
+	&__column {
+		border-right: 1px solid #ffff;
+		padding:0 30px;
+		&:last-child{
+			border-right: 0;
+		}
+	}
 	// .contsacts-header__items
 	&__items {}
 	// .contsacts-header__item
 	&__item {
 		// .contsacts-header__item_icon
-		&_icon {}
+		&_icon {
+			padding-left: 30px;
+			background: url("../img/header/phone-hed.png") left no-repeat;
+		}
 	}
 	// .contsacts-header__label
-	&__label {}
+	&__label {
+		font-size: 12px;
+		font-weight: 300;
+		margin-bottom: 5px;
+		color: #fff;
+	}
 	// .contsacts-header__phone
-	&__phone {}
+	&__phone {
+		color: #ffffff;
+		font-size: 18px;
+		font-weight: 900;
+		line-height: 18px;
+	}
 }
 .bottom-header {
 	// .bottom-header__content
-	&__content {}
+	&__content {
+		display: flex;
+		
+	}
 	// .bottom-header__column
-	&__column {}
+	&__column {
+		flex: 0 1 50%;
+		height: 63px;
+		align-items: center;
+	}
 	// .bottom-header__actions
 	&__actions {}
 	// .bottom-header__info
 	&__info {}
 }
 .actions-header {
+	display: flex;
 	// .actions-header__login
-	&__login {}
+	&__login {
+		display: inline-block;
+		line-height: 24px;
+		background: url('../img/header/key.png') left no-repeat;
+	}
 	// .actions-header__reg
 	&__reg {}
 	// .actions-header__email

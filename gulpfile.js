@@ -14,6 +14,7 @@ let rename = require("gulp-rename");
 let fileinclude = require("gulp-file-include");
 let clean_css = require("gulp-clean-css");
 let newer = require('gulp-newer');
+let sourcemaps = require('gulp-sourcemaps');
 
 let version = require('gulp-version-number');
 
@@ -87,6 +88,7 @@ function html() {
 }
 function css() {
 	return src(path.src.css, {})
+	.pipe(sourcemaps.init())
 		.pipe(
 			scss({ outputStyle: 'expanded' }).on('error', scss.logError)
 		)
@@ -95,6 +97,7 @@ function css() {
 				extname: ".min.css"
 			})
 		)
+		.pipe(sourcemaps.write())
 		.pipe(dest(path.build.css))
 		.pipe(browsersync.stream());
 }

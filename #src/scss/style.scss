@@ -82,9 +82,126 @@ body {
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
+
 .page {
 	flex: 1 1 auto;
+	padding-top: 160px;
+	// .page__container
+	&__container {
+		display: flex;
+	}
+	// .page__side
+	&__side {
+		flex: 0 0 260px;
+	}
+	// .page__menu
+	&__menu {}
+	// .page__content
+	&__content {
+		flex: 1 1 auto;
+		padding-left: 30px;
+	}
 }
+
+.menu-page {
+	background: url('../img/bg-menu.jpg') top no-repeat;
+	// .menu-page__header
+	&__header {
+		padding: 20px;
+		display: flex;
+		align-items: center;
+	}
+	// .menu-page__title
+	&__title {
+		color: #ffffff;
+		font-family: "UniSans";
+		line-height: math.div(40 , 30);
+		font-size: 30px;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 0.75px;
+	}
+	// .menu-page__burger
+	&__burger {
+		flex: 0 0 35px;
+		height: 35px;
+		background-color: #068292;
+		position: relative;
+		cursor: pointer;
+		padding: 10px 6px;
+		z-index: 0;
+		
+		span {
+			transition: all 0.3s ease 0s;
+			top: calc(50% - 1px);
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #fff;
+			&:first-child {
+				top: 0px;
+			}
+			&:last-child {
+				top: auto;
+				bottom: 0px;
+			}
+		}
+		&._active {
+			span {
+				transform: scale(0);
+				&:first-child {
+					transform: rotate(-45deg);
+					top: calc(50% - 1px);
+				}
+				&:last-child {
+					transform: rotate(45deg);
+					bottom: calc(50% - 1px);
+				}
+			}
+		}
+	}
+	li{
+		border-bottom: 1px solid #1aa7b9;;
+	}
+	&__lines{
+		height: 18px;
+		position: relative;
+	}
+	// .menu-page__body
+	&__body {}
+	// .menu-page__link
+	&__link {
+		font-size: 12px;
+		font-weight: 300;
+		letter-spacing: 0,3px;
+		color: #fff;
+		display: block;
+		padding: 12px 20px;
+		position: relative;
+		transition: all 0.3s ease 0s;
+		&:hover{
+			background-color: #098494;
+		}
+		// .menu-page__link_parent
+		&_parent {
+			&::after{
+				content:'';
+				background: url("../img/menu-arrow.png") 0 0 no-repeat;
+				position: absolute;
+				width: 14px;
+				height: 14px;
+				right: 10px;
+				top: 34%;
+			}
+		}
+	}
+	// .menu-page__submenu
+	&__submenu {}
+}
+.submenu-page {
+}
+
 //===================================================================================================================================
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================

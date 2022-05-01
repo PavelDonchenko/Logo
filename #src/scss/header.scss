@@ -3,13 +3,16 @@
 	padding: 0px 20px;
 } 
 .header {
-	background: url("../img/bg_header.jpg") top no-repeat ;
+	background: #fff url("../img/bg_header.jpg") top no-repeat ;
+	position: fixed;
+	width: 100%;
+	z-index: 5;
 	// .header__top
 	&__top {}
 	// .header__bottom
 	&__bottom {}
 	@media (max-width:$md3+px){
-		background: url("../img/bg_header.jpg") 0 0 no-repeat ;
+		background: #fff url("../img/bg_header.jpg") 0 0 no-repeat ;
 	}
 }
 .top-header {

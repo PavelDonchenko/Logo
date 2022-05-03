@@ -104,6 +104,7 @@ body {
 }
 
 .menu-page {
+	position: relative;
 	background: url('../img/bg-menu.jpg') top no-repeat;
 	// .menu-page__header
 	&__header {
@@ -197,10 +198,134 @@ body {
 		}
 	}
 	// .menu-page__submenu
-	&__submenu {}
+	&__submenu {
+		position: absolute;
+		height: 100%;
+		top: 0;
+		left: 100%;
+	}
 }
 .submenu-page {
+	width: 281px;
+	border: 2px solid #098494;
+	background-color: #ffffff;
+	// .submenu-page__items
+	&__items {
+		
+	}
+	// .submenu-page__menu
+	&__menu {
+		padding: 20px 0;
+		border-bottom: 1px solid #dedede;;
+		
+	}
+	&__wrap-link{
+		border-bottom: none !important;
+		
+	}
+	// .submenu-page__link
+	&__link {
+		font-size: 12px;
+		font-weight: 300;
+		color: #1ab9ce;
+		font-style: normal;
+		letter-spacing: 0.3px;
+		transition: all 0.3s ease 0s;
+		display: block;
+		padding: 10px 40px;
+		&:hover {
+			color: #fff;
+			background-color:#1ab9ce;
+			
+		}
+	}
 }
+.subname-page {
+	// .subname-page__product
+	&__product {
+		padding: 0 15px;
+	}
+}
+.item-product {
+	padding: 15px 10px;
+	position: relative;
+	// .item-product__labels
+	&__labels {
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		
+	}
+	// .item-product__label
+	&__label {
+		margin: 0px 0px 10px 0px;
+		height: 21px;
+		background-color: #fd8424;
+		padding: 4px 15px;
+		text-transform: uppercase;
+		border-radius: 10px;
+		font-weight: 900;
+		color: #fff;
+		align-items: center;
+		justify-content: center;
+		font-size: 14px;
+	}
+	// .item-product__img
+	&__img {
+		height: 195px;
+		display: flex;
+		justify-content:center;
+		align-items: center;
+		padding: 10px 0;
+		img{
+			max-width:100%;
+			max-height: 175px;
+		}
+	}
+	// .item-product__title
+	&__title {
+		font-size: 16px;
+		font-weight: 300;
+		color: #36949f;
+		line-height: 24px;
+		display: inline-block;
+		margin-bottom: 14px;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	// .item-product__footer
+	&__footer {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+	// .item-product__old-price
+	&__old-price {
+		flex: 1 1 100%;
+		text-align: right;
+		color: #999999;
+		font-size: 18px;
+		font-weight: 300;
+		text-decoration: line-through;
+	}
+	// .item-product__bottom
+	&__bottom {}
+	// .item-product__add
+	&__add {
+		width:40px;
+		height: 40px;
+		background: url('../img/Кнопка_корзины.png') 0 0 no-repeat;
+	}
+	// .item-product__price
+	&__price {
+		color: #333333;
+		font-size: 24px;
+		font-weight: 900;
+	}
+}
+
 
 //===================================================================================================================================
 
